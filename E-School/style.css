@@ -1,0 +1,152 @@
+.navbag{
+    width:1440px;
+    height:576px;
+    background-color:#F0FFF0;
+}
+.button-sign{
+    border:none;
+    border-radius:33px;
+    background-color:#21B573;
+    color:white;
+    padding:5px 15px;
+}
+.img-nav{
+    width:198.07px;
+    height:59px;
+    padding-left:40px;
+    
+}
+.navbar-nav{
+    padding-right: 135px;
+}
+.nav-left{
+    
+    padding-top:157px;
+   
+   
+    padding-left:60px;
+}
+.p-1{
+    color:#FD511A;
+}
+.p-2{
+    color:black;
+    font-weight:700px;
+}
+.span1{
+    color:#21B573;
+}
+.img-ilus img{
+    width:554px;
+    height:336px;
+    position:absolute;
+    top:157px;
+   
+   
+}
+.main{
+    background-color:#E5E5E5;
+}
+.iconic{
+    background-color: #E5E5E5;
+}
+.icon-img{
+    width:270px;
+    height:270px;
+    background-color: #F8FFFB;
+    margin-left: 50px;
+    margin-top:26px;
+    padding-top:52px;
+    padding-left: 70px;
+    border-radius: 10px;
+   
+    
+}
+.icon-img img{
+    width:66px;
+    height:85px;
+
+    margin-left: 40px;
+   
+}
+.icon-text{
+    margin-top:7px;
+}
+.icon-img:hover{
+    background-color: #FFFFFF;
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.1);
+  
+}
+
+.card-head{
+    margin-top:60px;
+    
+    border:none;
+    background-color:#E5E5E5;;
+}
+.card{
+    border:none;
+    margin-top:60px;
+    box-shadow:15px 15px 30px grey;
+    border-radius: 15px;;
+}
+.card .card-img-top{
+    padding:24px 19px 0px 19px;
+}
+.padding{
+    margin-right:30px;
+}
+
+    
+.text-head{
+    text-align:center;
+}
+/*.h-w{
+    height:483px;
+    margin-bottom: 5px;
+}*/
+
+.sm-img{
+    height:20px;
+    width:20px;
+}
+.margin3{
+    margin-top:17px;
+}
+.right{
+   float:right;
+}
+.p5{
+    padding-left:2px;
+}
+.man-head{
+    margin-top:180px;
+    padding-bottom: 70px;;
+    
+}
+.man-mid{
+    margin-top:30px;
+}
+.man{
+    height:120px;
+    width:120px;
+    margin-left:321px;
+
+}
+.man-text{
+    height:90px;
+    width:580px;
+    padding-left:67px;
+    
+}
+.footer{
+    background-color:  #282531;
+   
+    color:#FFFFFF;
+    padding-top:52px;
+    padding-bottom:55px;
+
+}
+.copy{
+    margin-top:50px;
+}

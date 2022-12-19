@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pin Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="pin-generator half-width">
+                    <input id="random-text" class="form-control" type="text">
+                    <button id="button-generate" class="generate-btn">Generate Pin</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="input-section half-width">
+                    <input id="cal-text" class="form-control" type="text">
+                    <div class="numbers">
+                        <div class="calc-body">
+                            <div class="calc-button-row">
+                              <div id="button-7" class="button">7</div>
+                              <div  id="button-8"class="button">8</div>
+                              <div  id="button-9"class="button">9</div>
+                            </div>
+                            <div class="calc-button-row">
+                              <div  id="button-4" class="button">4</div>
+                              <div  id="button-5" class="button">5</div>
+                              <div  id="button-6" class="button">6</div>
+                            </div>
+                            <div class="calc-button-row">
+                              <div  id="button-1" class="button">1</div>
+                              <div  id="button-2"class="button">2</div>
+                              <div  id="button-3"class="button">3</div>
+                            </div>
+                            <div class="calc-button-row">
+                                <div id="button-del"class="button"><</div>
+                                <div  id="button-0" class="button">0</div>
+                                <div id="button-c"class="button">C</div>
+                            </div>
+                            <div>
+                                <button id="submit-button" type="submit" class="submit-btn">Submit</button>
+                                <p class="action-left">3 try left</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="notify-section">
+            <p id="not-match"class="notify">❌ Pin Didn't Match, Please try again</p>
+            <p id="match"class="notify">✅ Pin Matched... Secret door is opening for you</p>
+        </div>
+    </div>
+    </div>
+    </div>
+
+
+
+
+  <script>
+
+//generate pin
+var generateBtn=document.getElementById("button-generate");
+ generateBtn.addEventListener("click",function(){
+   document.getElementById("random-text")
+    
+   
+    var randomText=Math.floor(1000 + Math.random() * 9000);
+    document.getElementById("random-text").value=randomText;
+   
+    
+})
+//button number
+var button=document.getElementById("button-7");
+ button.addEventListener("click",function(){
+
+    document.getElementById("cal-text").value=document.getElementById("cal-text").value+7;
+});
+
+var button=document.getElementById("button-8");
+button.addEventListener("click",function(){
+
+    document.getElementById("cal-text").value= document.getElementById("cal-text").value+8;
+});
+
+var button=document.getElementById("button-9");
+button.addEventListener("click",function(){
+
+    document.getElementById("cal-text").value= document.getElementById("cal-text").value+9;
+});
+var button=document.getElementById("button-4");
+button.addEventListener("click",function(){
+
+    document.getElementById("cal-text").value= document.getElementById("cal-text").value+4;
+});
+
+var button=document.getElementById("button-5");
+button.addEventListener("click",function(){
+
+    document.getElementById("cal-text").value= document.getElementById("cal-text").value+5;
+});
+
+var button=document.getElementById("button-6");
+button.addEventListener("click",function(){
+
+    document.getElementById("cal-text").value= document.getElementById("cal-text").value+6;
+});
+var button=document.getElementById("button-1");
+button.addEventListener("click",function(){
+
+    document.getElementById("cal-text").value= document.getElementById("cal-text").value+1;
+});
+
+var button=document.getElementById("button-2");
+button.addEventListener("click",function(){
+
+    document.getElementById("cal-text").value= document.getElementById("cal-text").value+2;
+});
+
+var button=document.getElementById("button-3");
+button.addEventListener("click",function(){
+
+    document.getElementById("cal-text").value= document.getElementById("cal-text").value+3;
+});
+
+var button=document.getElementById("button-0");
+button.addEventListener("click",function(){
+
+    document.getElementById("cal-text").value= document.getElementById("cal-text").value+0;
+});
+var button=document.getElementById("button-c");
+button.addEventListener("click",function(){
+
+    document.getElementById("cal-text").value="";
+});
+//"< button"
+var button=document.getElementById("button-del");
+button.addEventListener("click",function(){
+    var del=document.getElementById("cal-text").value;
+    del=del.substring(0,del.length-1);
+    document.getElementById("cal-text").value=del;
+
+ 
+});
+
+
+
+
+
+
+
+//submit area
+var buttonSubmit=document.getElementById("submit-button");
+buttonSubmit.addEventListener("click",function(){
+
+    if(document.getElementById("random-text").value==document.getElementById("cal-text").value){
+       document.getElementById("match").style.display='block';
+       document.getElementById("not-match").style.display= 'none';
+    }
+    else{
+
+        document.getElementById("not-match").style.display= 'block';
+        document.getElementById("match").style.display='none';
+
+    }
+    console.log(76);
+
+    
+});
+
+   </script>
+
+
+
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,50 @@
+.my-button{
+    border:none;
+    border-radius:10px;
+    background-color:black;
+    color:white;
+}
+.card{
+    border:none;
+   
+    box-shadow:10px 10px 25px grey;
+}
+
+#laptop{
+    margin-top:60px;
+}
+
+.card-title{
+    text-align: center;
+}
+
+.card-text{
+    text-align:center;
+}
+
+.card-footer{
+    border-top: none;
+    padding:10px 120px 0px 120px;
+    
+}
+.categories{
+
+    margin-top:60px;
+}
+.cat{
+    text-align:center;
+}
+.line{
+    padding-left: 47%;
+    font-size:30px;
+    color:orange
+    
+}
+.cats1{
+    height:200px;
+    border:10px solid blue;
+    
+    border-radius:5x;
+    box-shadow: 30px grey; 
+
+}

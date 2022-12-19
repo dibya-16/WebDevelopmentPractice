@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pioneer-Bank</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-area" >
+        <h1 class="text-center">Welcome to Pioneer Bank</h1>
+        <div class="login-style ">
+
+            <h3>Login</h3>
+            <input class="form-control" type="text" placeholder="Email"><br>
+            <input type="password" class="form-control" placeholder="Password" name="" id=""><br>
+            <button class="btn btn-success"id="btn-click">Enter</button>
+          
+
+
+        </div>
+
+    </div>
+
+    <div id="transaction-area" >
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="deposit">
+                    <h5>Deposit</h5>
+                    <h3>$<span id="deposit-amount">00</span></h3>
+                  </div>
+            </div>
+            <div class="col-md-4 ">
+                <div class="withdraw">
+                    <h5>Withdraw</h5>
+                    <h3>$<span id="withdraw-amount">00</span></h3>
+                  </div>
+            </div>
+            <div class="col-md-4 ">
+                <div class=" balance">
+                    <h5>Balance</h5>
+                    <h3>$<span id="current-balance">1200</span></h3>
+                  </div>
+            </div>
+        </div>
+
+
+
+     <div class="row">
+         <div class="col-md-6">
+             <div class="login-style">
+                 <h5>Deposit</h5>
+                 <input type="text"id="deposit-text" class="form-control" placeholder="$amount you want to deposit"><br>
+                 <button class="btn btn-success"id="add-deposit">Deposit</button>
+             
+             </div>
+
+         </div>
+         <div class="col-md-6">
+             <div class="login-style">
+                <h5>Withdraw</h5>
+                <input type="text" id="withdraw-text"class="form-control" placeholder="$amount you want to withdraw"><br>
+                <button class="btn btn-success"id="add-withdraw">Withdraw</button>
+             </div>
+
+         </div>
+        
+     </div>
+
+
+
+    </div>
+
+
+
+
+
+    <script>
+        //login area
+        var btn=document.getElementById("btn-click");
+         btn.addEventListener("click",function(){
+            var loginArea= document.getElementById("login-area");
+            loginArea.style.display= "none";
+            document.getElementById("transaction-area").style.display="block";
+
+         })
+         
+         //deposit area
+         var depositBtn=document.getElementById("add-deposit");
+         depositBtn.addEventListener("click",function(){
+         var depositNumber=getInputNumber("deposit-text");
+
+               updateArea("deposit-amount",depositNumber);
+               updateArea("current-balance",depositNumber);
+
+               document.getElementById("deposit-text").value="";
+
+
+         })
+
+         //withdraw area
+        
+         var withdrawBtn=document.getElementById("add-withdraw");
+         withdrawBtn.addEventListener("click",function(){
+         var withdrawNumber=getInputNumber("withdraw-text");
+
+               updateArea("withdraw-amount",withdrawNumber);
+               updateArea("current-balance",-1*withdrawNumber);
+
+               document.getElementById("withdraw-text").value="";
+
+
+
+         })
+
+         //InputNUmber
+         function getInputNumber(id){
+           var inputNumber=document.getElementById(id).value;
+           var amount=parseFloat(inputNumber);
+           return amount;
+               
+           }
+         
+            //update area
+
+            function updateArea(id,addedNumber){
+                var number=document.getElementById(id).innerText;
+                var allNumber=parseFloat(number);
+                var totalAmount=allNumber+addedNumber;
+                document.getElementById(id).innerText=totalAmount;
+            }
+
+
+
+               
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
